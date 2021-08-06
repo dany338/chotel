@@ -4,9 +4,8 @@ import { ErrorHandler } from './helper/errors.handler';
 import { route as routeRole } from './role/adapter/role.route';
 import { route as routeUser } from './user/adapter/user.route';
 import { route as routeAuth } from './auth/adapter/auth.route';
-import { route as routeAgent } from './agent/adapter/agent.route';
-import { route as routeLead } from './lead/adapter/lead.route';
-import { route as routeJudicial } from './judicial/adapter/judicial.route';
+import { route as routeRoom } from './room/adapter/room.route';
+import { route as routeReservation } from './reservation/adapter/reservation.route';
 
 const app = express();
 
@@ -27,12 +26,11 @@ app.all('*', (req: Request, res: Response, next: NextFunction) => {
 app.use('/roles', routeRole);
 app.use('/users', routeUser);
 app.use('/auth', routeAuth);
-app.use('/agents', routeAgent);
-app.use('/leads', routeLead);
-app.use('/judicials', routeJudicial);
+app.use('/rooms', routeRoom);
+app.use('/reservations', routeReservation);
 
 app.get('/health', (req: Request, res: Response) =>
-  res.send('Todo está ok CRMAGENTS 2')
+  res.send('Todo está ok CHOTEL 2')
 );
 
 // Errors

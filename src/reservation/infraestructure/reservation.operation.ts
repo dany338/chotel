@@ -49,9 +49,6 @@ export class ReservationOperation
     const trace: string = OperationService.getTrace();
     const repository: Repository<Reservation> = getRepository(Reservation);
     const data: ReservationModel = await repository.findOne({ where, relations, order });
-    if(data) {
-      data.score = data.judicials.length > 0 ? 0 : ResponseDto.randomScore(1, 100);
-    }
     console.log('getValidation', data);
     return ResponseDto.format(trace, data);
   }

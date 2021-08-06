@@ -33,13 +33,6 @@ route.get(
   Validators.validate(schemas.LIST_BY_PAGE),
   controller.listByPage.bind(controller)
 );
-route.get(
-  '/user/:user',
-  AuthenticationGuard.canActivate,
-  AuthorizationGuard.canActivate('ADMIN'),
-  Validators.validate(schemas.LIST_RoomS_BY_USER),
-  controller.listRoomsByUser.bind(controller)
-);
 route.post(
   '/',
   AuthenticationGuard.canActivate,

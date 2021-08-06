@@ -15,14 +15,14 @@ export const schemas = {
   },
   LIST_RESERVATIONS_BY_ROOM: {
     params: Joi.object({
-      agent: Joi.number().min(0).required(),
+      room: Joi.number().min(0).required(),
     }),
   },
   SEARCH_BY_NAME: {
     body: Joi.object({
-      firstname: Joi.string().required(),
-      lastname: Joi.string().required(),
-      idcard: Joi.string().required(),
+      startDate: Joi.string().required(),
+      endDate: Joi.string().required(),
+      room: Joi.number().required(),
     }),
   },
   GET_VALIDATION: {
@@ -30,17 +30,17 @@ export const schemas = {
   },
   INSERT: {
     body: Joi.object({
-      firstname: Joi.string().required(),
-      lastname: Joi.string().required(),
-      idcard: Joi.string().required(),
-      agent: Joi.number().required(),
+      startDate: Joi.string().required(),
+      endDate: Joi.string().required(),
+      room: Joi.number().required(),
     }),
   },
   UPDATE: {
     params: paramId,
     body: Joi.object({
-      firstname: Joi.string().required(),
-      lastname: Joi.string().required(),
+      startDate: Joi.string().required(),
+      endDate: Joi.string().required(),
+      room: Joi.number().required(),
     }),
   },
   REMOVE: {

@@ -38,10 +38,9 @@ export class RoleController {
   async insert(req: Request, res: Response): Promise<any> {
     const body = req.body;
     const Room: RoomModel = {
-      firstname: body.firstname,
-      lastname: body.lastname,
-      idcard: body.idcard,
-      user: body.user,
+      type: body.type,
+      beds: body.beds,
+      code: body.code,
     };
     const result = await this.useCase.insert(Room);
     res.json(result);
