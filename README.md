@@ -72,22 +72,27 @@ http://localhost:5000/reservation
 | 2.5. User Update       | PUT    | http://localhost:5000/users/:id        |
 | 2.6. User Delete       | DELETE | http://localhost:5000/users/:id        |
 
-#### 3. endpoints for reservation:
+#### 3. endpoints for room:
+
+| Endpoint               | VERB   | PATH                                  |
+| ---------------------- | ------ | ------------------------------------- |
+| 3.1. Room List         | GET    | http://localhost:5000/room/           |
+| 3.2. Room Id           | GET    | http://localhost:5000/room/:id        |
+| 3.3. Room List by page | GET    | http://localhost:5000/room/page/:page |
+| 3.4. Room Create       | POST   | http://localhost:5000/room/           |
+| 3.5. Room Update       | PUT    | http://localhost:5000/room/:id        |
+| 3.6. Room Delete       | DELETE | http://localhost:5000/room/:id        |
+
+#### 4. endpoints for reservation:
 
 | Endpoint                      | VERB   | PATH                                         |
 | ----------------------------- | ------ | -------------------------------------------- |
-| 3.1. Reservation List         | GET    | http://localhost:5000/reservation/           |
-| 3.2. Reservation Id           | GET    | http://localhost:5000/reservation/:id        |
-| 3.3. Reservation List by page | GET    | http://localhost:5000/reservation/page/:page |
-| 3.4. Reservation Create       | POST   | http://localhost:5000/reservation/           |
-| 3.5. Reservation Update       | PUT    | http://localhost:5000/reservation/:id        |
-| 3.6. Reservation Delete       | DELETE | http://localhost:5000/reservation/:id        |
-
-#### diagrams from diagram.net:
-
-https://app.diagrams.net/#G1cM-MdIOoNTJVVJTYiIsrBZmlF0KPNJNS
-
-https://drive.google.com/file/d/1cM-MdIOoNTJVVJTYiIsrBZmlF0KPNJNS/view?usp=sharing
+| 4.1. Reservation List         | GET    | http://localhost:5000/reservation/           |
+| 4.2. Reservation Id           | GET    | http://localhost:5000/reservation/:id        |
+| 4.3. Reservation List by page | GET    | http://localhost:5000/reservation/page/:page |
+| 4.4. Reservation Create       | POST   | http://localhost:5000/reservation/           |
+| 4.5. Reservation Update       | PUT    | http://localhost:5000/reservation/:id        |
+| 4.6. Reservation Delete       | DELETE | http://localhost:5000/reservation/:id        |
 
 review this folder diagrams
 
@@ -177,7 +182,5 @@ I suggest install xampp for simulate your server into local machine, and them in
 https://console.aws.amazon.com/iam/home?region=us-east-2#/users
 
 RDS: database relational > MySQL > Dev/Test > Burstable classes (includes t classes)
-
-(https://raw.githubusercontent.com/dany338/movies_backend/master/diagrams/Movies%20Backend%20Test-Model.png)
 
 **Free Software, Test Backend!**
